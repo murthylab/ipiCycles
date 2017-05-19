@@ -1,8 +1,8 @@
 % compares the manually segmented data from Kyriacou et al. to results obtained by the FlySongSegmenter with 
 % different parameters: the conservative ones used by Stern et al. (2014)
 % and those used by Coen et al. (2014)
-% provides detection rates as a function of 1. pulse amplitude and 2. pulse
-% carrier frequency
+% plot detection rates as a function of 1. pulse amplitude and 2. pulse
+% carrier frequency as well as histograms for the number of consecutively missed pulses
 cc()
 addpath('../code')
 segmentNames = {'Kyriacou', 'David','Pip'};

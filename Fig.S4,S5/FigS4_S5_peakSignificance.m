@@ -1,3 +1,4 @@
+%% plot spectral peaks and their significance for different upper IPI cutoffs (55ms and 75ms)
 cc()
 addpath(genpath('src'))
 Fs = 10000;

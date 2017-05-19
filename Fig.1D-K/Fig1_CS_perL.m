@@ -1,3 +1,5 @@
+% compares spectral peaks (irrepsecitve of their significance) of CantonS wild type and perL mutant flies for 
+% different period ranges and w/ and w/o false discovery rate correction
 cc()
 addpath(genpath('../code'))
 Fs = 10000;

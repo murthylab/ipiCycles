@@ -1,8 +1,8 @@
+% plot average IPI spectra for the different annotations
 cc()
 fileNames = {'Stern2014_KyriacouManual2017_spec_ipiCutoff75ms_full.mat', ...
              'Stern2014_FSSStern2014_spec_ipiCutoff75ms_cut.mat',...
              'Stern2014_FSSCoen2014_spec_ipiCutoff75ms_cut.mat'};
-%%
 %%
 clf
 for fil = 1:length(fileNames)
