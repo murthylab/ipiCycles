@@ -3,8 +3,8 @@
 % and those used by Coen et al. (2014)
 % plot detection rates as a function of 1. pulse amplitude and 2. pulse
 % carrier frequency as well as histograms for the number of consecutively missed pulses
-cc()
 addpath('../code')
+cc()
 segmentNames = {'Kyriacou', 'David','Pip'};
 %% load pulse shapes and 
 p = load('../data/Stern2014_KyriacouManual2017_pulses.mat','recId', 'pulseTimes', 'pulseShapes');

@@ -1,6 +1,6 @@
 %% plot spectral peaks and their significance for different upper IPI cutoffs (55ms and 75ms)
+addpath(genpath('../code'))
 cc()
-addpath(genpath('src'))
 Fs = 10000;
 fileNames = {'../spectra/Stern2014_KyriacouManual2017_spec_ipiCutoff75ms_full.mat', '../spectra/Stern2014_FSSStern2014_spec_ipiCutoff75ms_full.mat', '../spectra/Stern2014_FSSCoen2014_spec_ipiCutoff75ms_full.mat';...
    '../spectra/Stern2014_KyriacouManual2017_spec_ipiCutoff55ms_full.mat', '../spectra/Stern2014_FSSStern2014_spec_ipiCutoff55ms_full.mat', '../spectra/Stern2014_FSSCoen2014_spec_ipiCutoff55ms_full.mat'};
