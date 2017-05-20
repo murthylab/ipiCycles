@@ -2,7 +2,7 @@
 
 %per0
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/per0_KHIPIs_LLR=0.mat')
+load('per0_KHIPIs_LLR=0.mat')
 all_ipi = [];
 for i = 1:numel(IPI_results)
     all_ipi= cat(2,all_ipi,IPI_results(i).IPI.d);
@@ -14,7 +14,7 @@ std(all_ipi)/10
 
 %perL
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/perL_KHIPIs_LLR=0.mat')
+load('perL_KHIPIs_LLR=0.mat')
 all_ipi = [];
 for i = 1:numel(IPI_results)
     all_ipi= cat(2,all_ipi,IPI_results(i).IPI.d);
@@ -26,7 +26,7 @@ std(all_ipi)/10
 
 %perS
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/perS_KHIPIs_LLR=0.mat')
+load('perS_KHIPIs_LLR=0.mat')
 all_ipi = [];
 for i = 1:numel(IPI_results)
     all_ipi= cat(2,all_ipi,IPI_results(i).IPI.d);
@@ -38,7 +38,7 @@ std(all_ipi)/10
 
 % simNJ 
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/simNJ_KHIPIs_LLR=0.mat')
+load('simNJ_KHIPIs_LLR=0.mat')
 all_ipi = [];
 for i = 1:numel(IPI_results)
     all_ipi= cat(2,all_ipi,IPI_results(i).IPI.d);
@@ -50,7 +50,7 @@ std(all_ipi)/10
 
 % CantonS 
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/CantonS_KHIPIs_LLR=0.mat')
+load('CantonS_KHIPIs_LLR=0.mat')
 all_ipi = [];
 for i = 1:numel(IPI_results)
     all_ipi= cat(2,all_ipi,IPI_results(i).IPI.d);
@@ -62,7 +62,7 @@ std(all_ipi)/10
 
 % Manually annotated perL
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/KyriacouManual_data.mat')
+load('KyriacouManual_data.mat')
 all_ipi = [];
 for i = 1:14
     all_ipi= cat(1,all_ipi,ipi(:,i));
@@ -74,7 +74,7 @@ nanstd(all_ipi)*1000
 
 % Manually annotated CantonS
 clear all
-load('/Users/sternd/Dropbox (HHMI)/Writing/KH cycle rebuttal/github_code/Means/KyriacouManual_data.mat')
+load('KyriacouManual_data.mat')
 all_ipi = [];
 for i = 15:39
     all_ipi= cat(1,all_ipi,ipi(:,i));
