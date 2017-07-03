@@ -1,5 +1,5 @@
 cc()
-addpath('code')
+addpath('../code')
 % files with pulsetimes/intervals of different datasets and annotations
 fileNames = {'Stern2014_FSSCoen2014.mat';...
    'Stern2014_FSSStern2014.mat';...
@@ -13,12 +13,12 @@ OFAC = 20;        % Lomb Scargle oversampling factor (see help lomb)
 HIFAC = 0.4;      % Lomb Scargle (see help lomb)
 alpha = 0.05;     % significance level for peak detection
 F = 1./(20:.1:150);
-dK = load(['data/' 'Stern2014_KyriacouManual2017.mat']); %  manual annotation by Kyriacou et al. (2017)
+dK = load(['../data/' 'Stern2014_KyriacouManual2017.mat']); %  manual annotation by Kyriacou et al. (2017)
 cutLabel = {'full','cut'}; % cut recordings to the part that was manually annotated manually or use full recording
 
 for fil = 1:length(fileNames) % for each annotation - manual Kyriacou et al. 2017, automatic with parameters from Stern et al. (2014) and Coen et al. (2014)
    disp(fileNames{fil})
-   d = load(['data/' fileNames{fil}]); % load results from all flies for the current segmentation
+   d = load(['../data/' fileNames{fil}]); % load results from all flies for the current segmentation
    clear a spec peak
    for ic = 1:length(ipiCutoffHigh) % cut off IPIs at 55 or 75 ms
       for ct = 1:2  % cut recordings to the part that was manually annotated manually or use full recording
