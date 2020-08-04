@@ -3,7 +3,6 @@ randLabel = {'original', 'shuffled'};
 for ii = 1:length(randLabel)
    d{ii} = load(['Stern2014_KyriacouManual2017_spec_ipiCutoff75ms_' randLabel{ii}]);
 end
-% d{3} = load('../spectra/Stern2014_KyriacouManual2017_spec_ipiCutoff55ms_full.mat');
 %%
 cols = lines(2);
 clf
@@ -34,7 +33,7 @@ xlabel('period [s]')
 
 %%
 clear cnt;
-bins = 20:10:160;
+bins = 10:10:160;
 for ii = 1:length(d)
    cnt(:,ii) = hist(1./vertcat(d{ii}.peak.significant{:}), bins);
 end
@@ -47,7 +46,7 @@ mySubPlot(length(d)+1,2,length(d)+1,2)
 plot(bins, log2(cnt), 'LineWidth', 2)
 ylabel('log_2 count')
 xlabel('period [s]')
-set(gca, 'XLim', [20 150])
+set(gcas, 'XLim', [20 150])
 
 clp()
 if mfilename()

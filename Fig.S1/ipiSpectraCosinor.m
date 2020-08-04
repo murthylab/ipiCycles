@@ -24,7 +24,7 @@ spec.F = lomb(t,ipi,OFAC, HIFAC);   % estimate power spectrum
 % cosinor - using the frequencies from lomb-scargle
 for f = 1:length(spec.F)
    spec.F(f) = spec.F(f);
-   [spec.P(f), spec.p(f)] = cosinor(t, ipi, 1./spec.F(f), alpha);   % estimate power spectrum
+   [spec.P(f), spec.p(f)] = cosinor(t, ipi, 2*pi*spec.F(f), alpha);   % estimate power spectrum
 end
 
 % find peaks and their significance in the raw spectra

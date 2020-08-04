@@ -17,7 +17,7 @@ for fil = 1:length(fileNames) % for each annotation - manual Kyriacou et al. 201
    disp(fileNames{fil})
    d = load(['../data/' fileNames{fil}]); % load results from all flies for the current segmentation
    clear a spec peak
-   for ic = length(ipiCutoffHigh) % cut off IPIs at 55 or 75 ms
+   for ic = 1:length(ipiCutoffHigh) % cut off IPIs at 55 or 75 ms
       for ct = 1:2  % cut recordings to the part that was manually annotated manually or use full recording
          for fly = 1:size(d.ipi,2) % for each fly
             
@@ -34,7 +34,7 @@ for fil = 1:length(fileNames) % for each annotation - manual Kyriacou et al. 201
                
                %% calculate spectra using cosinor
                [thisSpec, thisPeak, thisA] = ipiSpectraCosinor(t,ipi, OFAC, HIFAC, alpha, F);
-
+               
                % reassemble data
                spec.F{fly} = thisSpec.F; spec.P{fly} = thisSpec.P; spec.p{fly} = thisSpec.p;
                peak.amp{fly} = thisPeak.amp; peak.loc{fly} = thisPeak.loc;
